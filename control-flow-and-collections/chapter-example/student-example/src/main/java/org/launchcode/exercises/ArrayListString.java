@@ -1,8 +1,7 @@
-package org.launchcode;
+package org.launchcode.exercises;
 
 import java.util.ArrayList;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayListString {

@@ -1,4 +1,4 @@
-package org.launchcode;
+package org.launchcode.exercises;
 
 import java.util.ArrayList;
 
