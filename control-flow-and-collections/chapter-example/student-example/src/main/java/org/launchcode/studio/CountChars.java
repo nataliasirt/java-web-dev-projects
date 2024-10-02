@@ -15,6 +15,7 @@ public class CountChars {
         //for-each loop that iterates over each character in the charArray
         for (char letter : charArray) {
             //logic for counting the characters.
+            System.out.println(letter);
 
             if (counts.containsKey(letter)) {
                 //If the character is found in the map, counts.get(letter) retrieves its current count, and then counts.put(letter, counts.get(letter) + 1) updates the count by adding 1.
