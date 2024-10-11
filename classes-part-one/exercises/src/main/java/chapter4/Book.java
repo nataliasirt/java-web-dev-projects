@@ -8,6 +8,8 @@ public class Book {
     private String author;
     private int numPages;
     private boolean available = true;
+    private static int nextIdNum = 1;
+    private final String bookId;
 
 
     // CONSTRUCTORS
@@ -16,6 +18,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.numPages = numPages;
+        this.bookId = generateBookId();
     }
 
     public Book(String title, String author) {
@@ -24,6 +27,15 @@ public class Book {
 
 
     // GETTERS & SETTERS
+
+
+    public static String getNextIdNum() {
+        return "\nThe next available number for a book Id will be " + nextIdNum;
+    }
+
+    public String getBookId() {
+        return bookId;
+    }
 
     public String getTitle() {
         return title;
@@ -52,6 +64,12 @@ public class Book {
 
 
     // INSTANCE METHODS
+private String generateBookId(){
+        String id = Utils.getInitials(author) + "-" + title.substring(0,3).toUpperCase() + "-" + nextIdNum;
+        nextIdNum++;
+        return id;
+}
+
 
     String getTitleAndAuthor() {
         return title + " by " + author;
